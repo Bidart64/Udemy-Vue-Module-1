@@ -19,11 +19,19 @@
     <section id="user-goal">
       <h2>My Course Goal</h2>
       <p>{{courseGoal?.replaceAll(`*`, ` `)}}</p>
-      <p>{{outputGoal()}}</p>
-      <p>Learn more <a v-bind:href="vueLink"> about Vue.</a></p>
-      <button v-on:click="reverseText">Reverse</button>
-      <button v-on:click="spaceOutText">Space Out</button>
-      <button v-on:click="jumbleText">Jumble</button>
+      <p>{{outputGoal}}</p>
+      <p>Learn more <a :href="vueLink"> about Vue.</a></p>
+      <button @click="reverseText">Reverse</button>
+      <button @click="spaceOutText">Space Out</button>
+      <button @click="jumbleText">Jumble</button>
+      <h2>Events in Action</h2>
+      <button @click="increment">Add</button>
+      <button @click="decrement">Remove</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-model="name">
+      <input type="text" v-model="lastName">
+      <button @click="resetInput">Reset Input</button>
+      <p>Your Name: {{ fullName }}</p>
     </section>
   </body>
 </html>
