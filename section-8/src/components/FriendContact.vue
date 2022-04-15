@@ -23,6 +23,7 @@ export default {
     emailAddress: { type: String, required: true },
     isFavorite: { type: Boolean, required: false, default: false },
   },
+  emits: [`toggle-favorite`],
   data() {
     return {
       detailsAreVisible: false,
