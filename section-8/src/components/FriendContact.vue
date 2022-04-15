@@ -7,6 +7,7 @@
     <button @click="toggleFavorite">
       {{ isFavorite ? "UnFavorite" : "Favorite" }}
     </button>
+    <button @click="$emit(`delete`, id)">Delete</button>
     <ul v-if="detailsAreVisible">
       <li><strong>Phone:</strong> {{ phoneNumber }}</li>
       <li><strong>Email:</strong> {{ emailAddress }}</li>
@@ -23,7 +24,7 @@ export default {
     emailAddress: { type: String, required: true },
     isFavorite: { type: Boolean, required: false, default: false },
   },
-  emits: [`toggle-favorite`],
+  emits: [`toggle-favorite`, `delete`],
   data() {
     return {
       detailsAreVisible: false,
