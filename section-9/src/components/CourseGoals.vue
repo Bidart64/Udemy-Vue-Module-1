@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="goal in goals" :key="goal">
-      <slot></slot>
+      <slot :item="goal"></slot>
     </li>
   </ul>
 </template>
