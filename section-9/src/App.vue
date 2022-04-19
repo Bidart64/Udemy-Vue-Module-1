@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import TheHeader from "./components/layout/layout/layout/TheHeader.vue";
+import TheHeader from "./components/layout/TheHeader.vue";
 import UserInfo from "./components/UserInfo.vue";
-import BadgeList from "./components/UI/BadgeList.vue";
+import BadgeList from "./components/BadgeList.vue";
 import CourseGoals from "./components/CourseGoals.vue";
 import ActiveGoals from "./components/ActiveGoals.vue";
 import ManageGoals from "./components/ManageGoals.vue";
